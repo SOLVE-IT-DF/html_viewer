@@ -21,6 +21,7 @@ jobs:
         with:
           repository: SOLVE-IT-DF/solve-it
           path: solve-it-data
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
