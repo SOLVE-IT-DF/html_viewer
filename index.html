@@ -1140,7 +1140,7 @@ button { font-family: inherit; cursor: pointer; }
 </div>
 
 <div class="generated-note">
-  SOLVE-IT Knowledge Base &mdash; Generated 2026-03-06 11:47 &mdash;
+  SOLVE-IT Knowledge Base &mdash; Generated 2026-03-07 06:23 &mdash;
   <a href="https://github.com/SOLVE-IT-DF/solve-it" target="_blank">github.com/SOLVE-IT-DF/solve-it</a>
 </div>
 
@@ -1424,7 +1424,7 @@ function renderMatrix() {
       cell.innerHTML = `
         <div class="tech-cell-id">${esc(t.id)}</div>
         <div class="tech-cell-name">${esc(t.name)}</div>
-        ${subs > 0 ? `<div class="tech-cell-sub">${isExpanded ? '−' : '+'} ${subs} sub-technique${subs>1?'s':''}</div>` : ''}
+        ${subs > 0 ? `<div class="tech-cell-sub">${isExpanded ? '&minus;' : '+'} ${subs} sub-technique${subs>1?'s':''}</div>` : ''}
       `;
       cell.addEventListener('click', (e) => {
         if (e.target.closest('.tech-cell-sub')) return;
@@ -1466,7 +1466,7 @@ function renderMatrix() {
               insertAfter.after(subCell);
               insertAfter = subCell;
             });
-            badge.textContent = `− ${subs} sub-technique${subs>1?'s':''}`;
+            badge.innerHTML = `&minus; ${subs} sub-technique${subs>1?'s':''}`;
           }
         });
       }
